@@ -1,9 +1,10 @@
 package functional_interface.implementacoes;
 
-import java.util.ArrayList;
 // Imports:
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.List;
 
 public class FunctionExample {
@@ -19,7 +20,7 @@ public class FunctionExample {
         // Usando a function para obter uma nova lista com os valores quebrados:
         List<Double> inteiros_quebrados = lista_de_inteiros.stream()
         .map(inteiro_quebrado)
-        .toList();
+        .collect(Collectors.toList());
     
         // Exibindo valores:
         inteiros_quebrados.forEach(System.out::println);

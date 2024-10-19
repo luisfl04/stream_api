@@ -4,6 +4,7 @@ package functional_interface.implementacoes;
 import java.util.function.Supplier;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class SupplierExample {
@@ -16,7 +17,7 @@ public class SupplierExample {
         // Populando uma lista a partir do valor do supplier criado:
         List<String> lista_de_saudacoes = Stream.generate(saudacao_personalizada)
         .limit(10)
-        .toList();
+        .collect(Collectors.toList());
 
         // Imprimindo cada elemento da lista:
         lista_de_saudacoes.forEach(System.out::println);

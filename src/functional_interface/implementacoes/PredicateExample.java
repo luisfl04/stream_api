@@ -4,6 +4,7 @@ package functional_interface.implementacoes;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class PredicateExample {
     
@@ -17,7 +18,7 @@ public class PredicateExample {
         // Nova lista que recebe os valores filtrados:
         List<Integer> valores_menores_que_sete = valores_inteiros.stream()
         .filter(menor_que_sete)
-        .toList();
+        .collect(Collectors.toList());
     
         // Exibição:
         valores_menores_que_sete.forEach(System.out::println);
@@ -44,7 +45,7 @@ class OtherPredicateExample{
         // Lista que receberá os valores filtrados:
         List<String> palavras_reservadas_com_menos_que_quatro_letras = palavras_reservadas.stream()
         .filter(menor_que_quatro_letras)
-        .toList();
+        .collect(Collectors.toList());
         
         // Exibindo:
         palavras_reservadas_com_menos_que_quatro_letras.forEach(System.out::println);
